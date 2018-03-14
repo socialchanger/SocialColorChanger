@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="no-js" id="extension">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FB Color And theme Changer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link type="text/css" href="css/colors.css" rel="stylesheet"/>
+    <link type="text/css" href="css/popup.css" rel="stylesheet"/>
+    <script src="script/jquery.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/bootstrap-toggle.min.js"></script>
+    <script type="text/javascript" src="script/themes.js"></script>
+    <script type="text/javascript" src="script/colors.js"></script>
+    <script type="text/javascript" src="script/popup.js"></script>
+</head>
+<body class="hidden">
+<div id="app">
+    <header>
+    </header>
+
+    <section id="notification"></section>
+
+    <section id="edit-list-screen">
+        <div class="form regular sand">
+            <div class="input-group pad10">
+                <span class="input-group-addon" id="txt_theme_name">Theme Name</span>
+                <input type="text" id="theme_name" class="form-control" data-lettercase="uppercase" size="7">
+                <input type="hidden" id="old_theme_name">
+            </div>
+
+            <div class="input-group">
+                <div class="minicolors minicolors-theme-bootstrap">
+                    <input type="text" id="header_color" class="form-control minicolors-input"
+                           data-lettercase="uppercase" size="7">
+                </div>
+                <span class="input-group-addon" id="txt_header_color">Header Color</span>
+            </div>
+
+            <div class="input-group">
+                <div class="minicolors minicolors-theme-bootstrap">
+                    <input type="text" id="text_header_color" class="form-control minicolors-input"
+                           data-lettercase="uppercase" size="7">
+                </div>
+                <span class="input-group-addon" id="txt_text_header_color">Header Text Color</span>
+            </div>
+
+            <div class="input-group">
+                <div class="minicolors minicolors-theme-bootstrap">
+                    <input type="text" id="theme_color" class="form-control minicolors-input"
+                           data-lettercase="uppercase" size="7">
+                </div>
+                <span class="input-group-addon" id="txt_theme_color">Theme Color</span>
+            </div>
+
+            <div class="input-group">
+                <div class="minicolors minicolors-theme-bootstrap">
+                    <input type="text" id="inner_boxes_color" class="form-control minicolors-input"
+                           data-lettercase="uppercase" size="7">
+                </div>
+                <span class="input-group-addon" id="txt_boxes_color">Inner Boxes Color</span>
+            </div>
+
+            <div class="input-group">
+                <div class="minicolors minicolors-theme-bootstrap">
+                    <input type="text" id="heading_color" class="form-control minicolors-input"
+                           data-lettercase="uppercase" size="7">
+                </div>
+                <span class="input-group-addon" id="txt_heading_color">Heading/Links Color</span>
+            </div>
+
+            <div class="input-group">
+                <div class="minicolors minicolors-theme-bootstrap">
+                    <input type="text" id="text_color" class="form-control minicolors-input" data-lettercase="uppercase"
+                           size="7">
+                </div>
+                <span class="input-group-addon" id="txt_boxes_color">Text Color</span>
+            </div>
+
+            <div class="input-group">
+                <div class="minicolors minicolors-theme-bootstrap">
+                    <input type="text" id="buttons_color" class="form-control minicolors-input"
+                           data-lettercase="uppercase" size="7">
+                </div>
+                <span class="input-group-addon" id="txt_buttons_color">Buttons Color</span>
+            </div>
+
+            <div class="input-group">
+                <div class="minicolors minicolors-theme-bootstrap">
+                    <input type="text" id="borders_color" class="form-control minicolors-input"
+                           data-lettercase="uppercase" size="7">
+                </div>
+                <span class="input-group-addon" id="txt_borders_color">Borders Color</span>
+            </div>
+
+            <div class="bg-success save_msg save_hidden dv_center" id="txt_msg"></div>
+
+            <div class="dv_center">
+                <button class="btn btn-dark btn-sm btn_down" id="save_theme">SAVE</button>
+                <button class="btn btn-primary btn-sm btn_down" id="savenew_theme">SAVE NEW</button>
+                <button class="btn btn-danger btn-sm btn_down" id="cancel_theme">CANCEL</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-screen">
+        <div class="checkbox dv_center title_dv title_fixed">
+            <label>
+                <input type="checkbox" data-toggle="toggle" data-offstyle="danger" id="enable_color">Enable FB Color
+                Changer
+            </label>
+        </div>
+
+        <section class="templates-list">
+            <h2>Saved Themes</h2>
+            <div class="below">
+                <ul id="templatesList"></ul>
+            </div>
+        </section>
+        <div class="dv_center">
+            <button class="btn btn-dark btn-sm" id="create_theme">Create New Theme</button>
+        </div>
+    </section>
+</div>
+
+
+<div id="templates">
+    <template id="theme">
+        <li>
+            <span class="x">x</span> <span class="txt">{{content}}</span>
+            <div class="toggles">
+                <a href="#" class="edit">Edit</a>
+            </div>
+        </li>
+    </template>
+    <template id="themep">
+        <li class="litheme">
+            <span class="txt">{{content}}</span>
+            <div class="toggles">
+                <a href="#" class="edit">Edit</a>
+            </div>
+        </li>
+    </template>
+</div>
+<script src="script/bootstrap-confirmation.js"></script>
+</body>
+</html>
