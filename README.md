@@ -1,3 +1,4 @@
+<meta name="google-site-verification" content="_IJ4FhZvFjdMMX63moWDeIAJdP_5DrBUL8CKG3yulhA" />
 # SocialColorChanger
 Change the color scheme of your favorite social media sites.
 
